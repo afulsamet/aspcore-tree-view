@@ -1,0 +1,19 @@
+﻿@model List<File>
+
+@{
+    ViewData["Title"] = "Tree View";
+}
+
+<div class="lg:text-center py-6">
+    <p class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">ASP.NET Core</p>
+    <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        Tree View
+    </h3>
+    <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
+        View Component <span class="text-indigo-600 font-medium mx-2">+</span> Alpine.js <span class="text-indigo-600 font-medium mx-2">+</span> Tailwind CSS
+    </p>
+</div>
+
+<div class="w-full py-6">
+    @await Component.InvokeAsync("TreeView", new { Files = Model })
+</div>
